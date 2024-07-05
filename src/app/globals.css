@@ -1,11 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --dark-blue: #0146b1;
+  --gray-light: #d6dae0;
+  --gray-blue: #e4eefc;
+  --gray-white: #f3f7fa;
+  --green-blue: #00a79d;
+  --lime: #b3fe4a;
+  --sky-blue: #5afef4;
+  --gradient-blue: linear-gradient(180deg, #0038f0 94%, #299df2 75%);
+  --black: #131517;
+  --dark-gray: #24272d;
+  --mid-gray: #6e7175;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,21 +20,37 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --dark-blue: #0146b1;
+    --gray-light: #d6dae0;
+    --gray-blue: #e4eefc;
+    --gray-white: #f3f7fa;
+    --green-blue: #00a79d;
+    --lime: #b3fe4a;
+    --sky-blue: #5afef4;
+    --gradient-blue: linear-gradient(180deg, #0038f0 94%, #299df2 75%);
+    --black: #131517;
+    --dark-gray: #24272d;
+    --mid-gray: #6e7175;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+/* linear-gradient(rgba(0, 56, 240, 0.94), rgba(41, 157, 242, 0.75)); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.main {
+  background: var(--gray-blue);
+}
+.login {
+  color: var(--dark-blue);
+}
+.btn {
+  background: var(--dark-blue);
+  color: white;
 }
